@@ -19,6 +19,11 @@ function love.load()
     love.graphics.setFont(TIME_FONT)
 end
 
+function love.draw()
+    drawBackground()
+    drawTimeText()
+end
+
 function love.update(dt)
     -- Update elapsed time (dt is delta time in seconds)
     elapsedTime = elapsedTime + dt
@@ -47,9 +52,4 @@ function drawTimeText()
     
     love.graphics.setColor(COLOR_WHITE)
     love.graphics.print(timeText, centeredX, centeredY)
-end
-
-function love.draw()
-    drawBackground()
-    drawTimeText()
 end
