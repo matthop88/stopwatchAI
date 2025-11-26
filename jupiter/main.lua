@@ -10,13 +10,8 @@ local elapsedTime = 0  -- Time in seconds
 local TIME_FONT
 
 function love.load()
-    -- Set window properties
-    love.window.setTitle("STOPWATCH!!!")
-    love.window.setMode(WINDOW_WIDTH, WINDOW_HEIGHT)
-    
-    -- Create TIME_FONT for the timer display
-    TIME_FONT = love.graphics.newFont(64)
-    love.graphics.setFont(TIME_FONT)
+    setWindowProperties()
+    createTimeFont()
 end
 
 function love.draw()
@@ -27,6 +22,16 @@ end
 function love.update(dt)
     -- Update elapsed time (dt is delta time in seconds)
     elapsedTime = elapsedTime + dt
+end
+
+function setWindowProperties()
+    love.window.setTitle("STOPWATCH!!!")
+    love.window.setMode(WINDOW_WIDTH, WINDOW_HEIGHT)
+end
+
+function createTimeFont()
+    TIME_FONT = love.graphics.newFont(64)
+    love.graphics.setFont(TIME_FONT)
 end
 
 function drawBackground()
