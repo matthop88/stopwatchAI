@@ -1,19 +1,22 @@
 -- Stopwatch Application - WATCH-001
 -- Timer that counts up at 1 second per second
 
+local WINDOW_WIDTH = 300
+local WINDOW_HEIGHT = 400
+
 local elapsedTime = 0  -- Time in seconds
 local font
 
 function love.conf(t)
     t.window.title = "STOPWATCH!!!"
-    t.window.width = 300
-    t.window.height = 400
+    t.window.width = WINDOW_WIDTH
+    t.window.height = WINDOW_HEIGHT
 end
 
 function love.load()
     -- Set window properties
     love.window.setTitle("STOPWATCH!!!")
-    love.window.setMode(300, 400)
+    love.window.setMode(WINDOW_WIDTH, WINDOW_HEIGHT)
     
     -- Create font for the timer display
     font = love.graphics.newFont(64)
@@ -45,8 +48,8 @@ function love.draw()
     local textHeight = font:getHeight()
     
     -- Calculate centered position
-    local x = (300 - textWidth) / 2
-    local y = (400 - textHeight) / 2
+    local x = (WINDOW_WIDTH - textWidth) / 2
+    local y = (WINDOW_HEIGHT - textHeight) / 2
     
     -- Draw the time text centered
     love.graphics.print(timeText, x, y)
