@@ -24,7 +24,6 @@ function love.update(dt)
 end
 
 function drawBackground()
-    -- Set salmon background color (r = 0.8, g = 0.5, b = 0.5)
     love.graphics.clear(COLOR_SALMON)
 end
 
