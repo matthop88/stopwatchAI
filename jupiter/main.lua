@@ -41,15 +41,13 @@ function love.draw()
     
     local timeText = getTimeTextMMSS()
     
-    -- Get text dimensions for centering
     local textWidth = TIME_FONT:getWidth(timeText)
     local textHeight = TIME_FONT:getHeight()
     
-    -- Calculate centered position
-    local x = (WINDOW_WIDTH - textWidth) / 2
-    local y = (WINDOW_HEIGHT - textHeight) / 2
+    local centeredX = (WINDOW_WIDTH - textWidth) / 2
+    local centeredY = (WINDOW_HEIGHT - textHeight) / 2
     
     -- Draw the time text centered
     love.graphics.setColor(COLOR_WHITE)
-    love.graphics.print(timeText, x, y)
+    love.graphics.print(timeText, centeredX, centeredY)
 end
