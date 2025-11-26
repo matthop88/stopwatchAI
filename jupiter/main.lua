@@ -24,6 +24,8 @@ function love.update(dt)
     elapsedTime = elapsedTime + dt
 end
 
+-- Functions called by love.load()
+
 function setWindowProperties()
     love.window.setTitle("STOPWATCH!!!")
     love.window.setMode(WINDOW_WIDTH, WINDOW_HEIGHT)
@@ -33,6 +35,8 @@ function createTimeFont()
     TIME_FONT = love.graphics.newFont(64)
     love.graphics.setFont(TIME_FONT)
 end
+
+-- Functions called by love.draw()
 
 function drawBackground()
     love.graphics.clear(COLOR_SALMON)
@@ -58,3 +62,5 @@ function getTimeTextMMSS()
     
     return string.format("%02d:%02d", minutes, seconds)
 end
+
+-- Functions called by love.update()
