@@ -23,9 +23,13 @@ function love.update(dt)
     elapsedTime = elapsedTime + dt
 end
 
-function love.draw()
+function drawBackground()
     -- Set salmon background color (r = 0.8, g = 0.5, b = 0.5)
     love.graphics.clear(COLOR_SALMON)
+end
+
+function love.draw()
+    drawBackground()
     
     -- Calculate minutes and seconds
     local totalSeconds = math.floor(elapsedTime)
