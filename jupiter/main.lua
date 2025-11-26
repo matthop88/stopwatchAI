@@ -7,13 +7,11 @@ local WINDOW_HEIGHT = 400
 local elapsedTime = 0  -- Time in seconds
 local font
 
-function love.conf(t)
-    t.window.title = "STOPWATCH!!!"
-    t.window.width = WINDOW_WIDTH
-    t.window.height = WINDOW_HEIGHT
-end
-
 function love.load()
+    -- Set window properties
+    love.window.setTitle("STOPWATCH!!!")
+    love.window.setMode(WINDOW_WIDTH, WINDOW_HEIGHT)
+    
     -- Create font for the timer display
     font = love.graphics.newFont(64)
     love.graphics.setFont(font)
