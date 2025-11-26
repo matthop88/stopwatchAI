@@ -36,9 +36,7 @@ function getTimeTextMMSS()
     return string.format("%02d:%02d", minutes, seconds)
 end
 
-function love.draw()
-    drawBackground()
-    
+function drawTimeText()
     local timeText = getTimeTextMMSS()
     
     local textWidth = TIME_FONT:getWidth(timeText)
@@ -49,4 +47,9 @@ function love.draw()
     
     love.graphics.setColor(COLOR_WHITE)
     love.graphics.print(timeText, centeredX, centeredY)
+end
+
+function love.draw()
+    drawBackground()
+    drawTimeText()
 end
