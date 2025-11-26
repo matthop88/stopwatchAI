@@ -4,6 +4,7 @@
 local WINDOW_WIDTH = 300
 local WINDOW_HEIGHT = 400
 local COLOR_SALMON = {0.8, 0.5, 0.5}
+local COLOR_WHITE = {1, 1, 1}
 
 local elapsedTime = 0  -- Time in seconds
 local TIME_FONT
@@ -40,8 +41,7 @@ function love.draw()
     
     local timeText = getTimeTextMMSS()
     
-    -- Set white text color
-    love.graphics.setColor(1, 1, 1)
+    love.graphics.setColor(COLOR_WHITE)
     
     -- Get text dimensions for centering
     local textWidth = TIME_FONT:getWidth(timeText)
