@@ -3,6 +3,7 @@
 
 local WINDOW_WIDTH = 300
 local WINDOW_HEIGHT = 400
+local COLOR_SALMON = {0.8, 0.5, 0.5}
 
 local elapsedTime = 0  -- Time in seconds
 local TIME_FONT
@@ -24,7 +25,7 @@ end
 
 function love.draw()
     -- Set salmon background color (r = 0.8, g = 0.5, b = 0.5)
-    love.graphics.clear(0.8, 0.5, 0.5)
+    love.graphics.clear(COLOR_SALMON)
     
     -- Calculate minutes and seconds
     local totalSeconds = math.floor(elapsedTime)
