@@ -47,7 +47,6 @@ function love.draw()
     local centeredX = (WINDOW_WIDTH - textWidth) / 2
     local centeredY = (WINDOW_HEIGHT - textHeight) / 2
     
-    -- Draw the time text centered
     love.graphics.setColor(COLOR_WHITE)
     love.graphics.print(timeText, centeredX, centeredY)
 end
