@@ -5,16 +5,16 @@ local WINDOW_WIDTH = 300
 local WINDOW_HEIGHT = 400
 
 local elapsedTime = 0  -- Time in seconds
-local font
+local TIME_FONT
 
 function love.load()
     -- Set window properties
     love.window.setTitle("STOPWATCH!!!")
     love.window.setMode(WINDOW_WIDTH, WINDOW_HEIGHT)
     
-    -- Create font for the timer display
-    font = love.graphics.newFont(64)
-    love.graphics.setFont(font)
+    -- Create TIME_FONT for the timer display
+    TIME_FONT = love.graphics.newFont(64)
+    love.graphics.setFont(TIME_FONT)
 end
 
 function love.update(dt)
@@ -38,8 +38,8 @@ function love.draw()
     love.graphics.setColor(1, 1, 1)
     
     -- Get text dimensions for centering
-    local textWidth = font:getWidth(timeText)
-    local textHeight = font:getHeight()
+    local textWidth = TIME_FONT:getWidth(timeText)
+    local textHeight = TIME_FONT:getHeight()
     
     -- Calculate centered position
     local x = (WINDOW_WIDTH - textWidth) / 2
