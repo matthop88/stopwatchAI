@@ -14,10 +14,6 @@ function love.conf(t)
 end
 
 function love.load()
-    -- Set window properties
-    love.window.setTitle("STOPWATCH!!!")
-    love.window.setMode(WINDOW_WIDTH, WINDOW_HEIGHT)
-    
     -- Create font for the timer display
     font = love.graphics.newFont(64)
     love.graphics.setFont(font)
