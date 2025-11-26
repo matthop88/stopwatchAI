@@ -28,12 +28,10 @@ function drawBackground()
 end
 
 function getTimeTextMMSS()
-    -- Calculate minutes and seconds
     local totalSeconds = math.floor(elapsedTime)
     local minutes = math.floor(totalSeconds / 60)
     local seconds = totalSeconds % 60
     
-    -- Format time as "MM:SS"
     return string.format("%02d:%02d", minutes, seconds)
 end
 
