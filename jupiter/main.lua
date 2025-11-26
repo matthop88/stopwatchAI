@@ -27,16 +27,20 @@ function drawBackground()
     love.graphics.clear(COLOR_SALMON)
 end
 
-function love.draw()
-    drawBackground()
-    
+function getTimeTextMMSS()
     -- Calculate minutes and seconds
     local totalSeconds = math.floor(elapsedTime)
     local minutes = math.floor(totalSeconds / 60)
     local seconds = totalSeconds % 60
     
     -- Format time as "MM:SS"
-    local timeText = string.format("%02d:%02d", minutes, seconds)
+    return string.format("%02d:%02d", minutes, seconds)
+end
+
+function love.draw()
+    drawBackground()
+    
+    local timeText = getTimeTextMMSS()
     
     -- Set white text color
     love.graphics.setColor(1, 1, 1)
