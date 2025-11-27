@@ -9,6 +9,10 @@ local COLOR_WHITE = {1, 1, 1}
 local elapsedTime = 0  -- Time in seconds
 local TIME_FONT
 
+------------------------------------------------------------
+--                    LOVE2D Functions                    --
+------------------------------------------------------------
+
 function love.load()
     setWindowProperties()
     createTimeFont()
