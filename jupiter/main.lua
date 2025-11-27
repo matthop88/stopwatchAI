@@ -1,6 +1,10 @@
 -- Stopwatch Application - WATCH-001
 -- Timer that counts up at 1 second per second
 
+------------------------------------------------------------
+--                     Local Variables                    --
+------------------------------------------------------------
+
 local WINDOW_WIDTH = 300
 local WINDOW_HEIGHT = 400
 local COLOR_SALMON = {0.8, 0.5, 0.5}
