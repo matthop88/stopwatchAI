@@ -71,7 +71,3 @@ function getTimeTextMMSS()
     
     return string.format("%02d:%02d", minutes, seconds)
 end
-
-------------------------------------------------------------
---            Functions called by love.update()           --
-------------------------------------------------------------
