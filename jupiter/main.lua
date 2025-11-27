@@ -25,7 +25,7 @@ function love.update(dt)
 end
 
 ------------------------------------------------------------
---           Functions called by love.load()            --
+--            Functions called by love.load()             --
 ------------------------------------------------------------
 
 function setWindowProperties()
@@ -39,7 +39,7 @@ function createTimeFont()
 end
 
 ------------------------------------------------------------
---            Functions called by love.draw()           --
+--             Functions called by love.draw()            --
 ------------------------------------------------------------
 
 function drawBackground()
@@ -68,5 +68,5 @@ function getTimeTextMMSS()
 end
 
 ------------------------------------------------------------
---           Functions called by love.update()          --
+--            Functions called by love.update()           --
 ------------------------------------------------------------
