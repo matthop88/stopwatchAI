@@ -68,5 +68,5 @@ function getTimeTextMMSS()
 end
 
 ------------------------------------------------------------
---          Functions called by love.update()           --
+--           Functions called by love.update()          --
 ------------------------------------------------------------
