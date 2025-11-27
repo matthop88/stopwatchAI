@@ -55,10 +55,8 @@ end
 
 function drawTimeText()
     local timeText   = getTimeTextMMSS()
-    
     local textWidth  = TIME_FONT:getWidth(timeText)
     local textHeight = TIME_FONT:getHeight()
-    
     local centeredX  = (WINDOW_WIDTH - textWidth) / 2
     local centeredY  = (WINDOW_HEIGHT - textHeight) / 2
     
