@@ -28,7 +28,6 @@ function love.draw()
 end
 
 function love.update(dt)
-    -- Update elapsed time (dt is delta time in seconds)
     elapsedTime = elapsedTime + dt
 end
 
